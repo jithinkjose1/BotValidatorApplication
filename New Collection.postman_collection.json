@@ -1,0 +1,71 @@
+{
+	"info": {
+		"_postman_id": "fa6e51dc-c14d-482d-8ff9-1e54348da68e",
+		"name": "New Collection",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "botValidator",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "UserId",
+						"value": "qwerty",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:8080/botValidator",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"botValidator"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "botValidate",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "UserId",
+						"value": "qwerty",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"id\": 2,\r\n    \"question\": \"Please sum the numbers 31,98,7\",\r\n    \"answer\": 136\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/botValidator",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"botValidator"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
